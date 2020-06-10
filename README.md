@@ -28,6 +28,8 @@ No modifications were required in the code for Denoised dataset. However, for hi
 
 Also, in order to expedite the learning process for higher-resolution images, the initial ACM was initialized with double the original size. This helped in better initialization and made the learning faster.
 
+- Refer to `main_bing_sr.py` to see modifications regarding ACM initialization.
+
 ## Datasets
 
 ### Image Denoising
