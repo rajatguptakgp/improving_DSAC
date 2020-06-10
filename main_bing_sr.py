@@ -15,6 +15,27 @@ model_path = 'models/bing/'
 do_plot = False
 do_train = True
 
+#function to transform coordinates radially outwards
+def change_coordinate(Z):
+    X=Z[:,0]
+    Y=Z[:,1]
+
+    X_mean=sum(X)/len(X)
+    Y_mean=sum(Y)/len(Y)
+
+    X1=X-X_mean
+    Y1=Y-Y_mean
+
+    X1=2*X1
+    Y1=2*Y1
+
+    X1=X1+X_mean
+    Y1=Y1+Y_mean
+
+    X1=X1.reshape(-1,1)
+    Y1=Y1.reshape(-1,1)
+
+    return np.hstack((X1,Y1))
 
 def snake_process (mapE, mapA, mapB, mapK, init_snake):
 
@@ -157,6 +178,12 @@ def epoch(n,i,mode):
     init_u = init_u.reshape([L, 1])
     init_v = init_v.reshape([L, 1])
     init_snake = np.array([init_u[:, 0], init_v[:, 0]]).T
+    
+    #######
+    #initial acm transformation
+    init_snake=change_coordinate(init_snake)
+    #######
+    
     for j in range(batch_size):
         snake, snake_hist = snake_process(mapE, mapA, mapB, mapK, init_snake)
         # Get last layer gradients
