@@ -179,10 +179,10 @@ def epoch(n,i,mode):
     init_v = init_v.reshape([L, 1])
     init_snake = np.array([init_u[:, 0], init_v[:, 0]]).T
     
-    #######
+    ########
     #initial acm transformation
     init_snake=change_coordinate(init_snake)
-    #######
+    ########
     
     for j in range(batch_size):
         snake, snake_hist = snake_process(mapE, mapA, mapB, mapK, init_snake)
