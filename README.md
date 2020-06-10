@@ -31,13 +31,10 @@ Also, in order to expedite the learning process for higher-resolution images, th
 ## Datasets
 
 ### Image Denoising
-A pretrained GAN-based MSRResNet(https://github.com/cszn/KAIR) was used to obtain denoised images. The average PSNR obtained between original and noisy images was 30.10 dB. The following is an image-pair highlighting the model performance: 
+A pretrained [GAN-based MSRResNet](https://github.com/cszn/KAIR) was used to obtain denoised images. The average PSNR obtained between original and noisy images was 30.10 dB. The following is an image-pair highlighting the model performance: 
 
 ![denoised_output](https://user-images.githubusercontent.com/55928605/84306686-6f9a5800-ab79-11ea-96e0-ad4afc30a6ee.png)
 
 ### Super Resolution
 
-A pretrained Residual Dense Network (RDN)(https://github.com/idealo/image-super-resolution) was used to obtain 128 X 128 images.
-
-## Acknowledgement
-* Diego Marcos [Original Implementation](https://github.com/dmarcosg/DSAC) 
+A pretrained (Residual Dense Network) [RDN](https://github.com/idealo/image-super-resolution) was used to obtain 128 X 128 images. 
