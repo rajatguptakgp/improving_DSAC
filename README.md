@@ -26,7 +26,7 @@ No modifications were required in the code for Denoised dataset. However, for hi
 
 - Use `make_building_footprints.ipynb` to transform building footprints and store them in a CSV file.
 
-Also, in order to expedite the learning process for higher-resolution images, the initial ACM was initialized with double the original size. This helped in better initialization and made the learning faster.
+Also, in order to expedite the learning process for higher-resolution images, the initial ACM was initialized with double its original size by a radial outward transformation (similar to that done on building footprints). This helped in better initialization and made the learning faster.
 
 - Refer to `main_bing_sr.py` to see modifications regarding ACM initialization.
 
@@ -39,4 +39,4 @@ A pretrained [GAN-based MSRResNet](https://github.com/cszn/KAIR) was used to obt
 
 ### Super Resolution
 
-A pretrained (Residual Dense Network) [RDN](https://github.com/idealo/image-super-resolution) was used to obtain 128 X 128 images. 
+A pretrained (Residual Dense Network) [RDN](https://github.com/idealo/image-super-resolution) was used to obtain 128 X 128 higher-resolution images. 
