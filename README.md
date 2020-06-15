@@ -6,7 +6,7 @@ This work is about improving building instance segmentation through Deep Structu
 
 ## Results
 
-The work highlights how Denoising and Super Resolution can help in removing noise or increasing resolution respectively, thereby improving quality of images, can consequently lead to better segmentation.
+The work highlights how **Denoising** and **Super Resolution** can help in removing noise or increasing resolution respectively, thereby improving quality of images, can consequently lead to better segmentation.
 
 The work is specifically done on [Bing Huts dataset](https://github.com/dmarcosg/DSAC) because of its low-resolution images of 64 pixels. Following results highlight the improvement in evaluation metrics with augmented datasets:
 
